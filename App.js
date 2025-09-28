@@ -57,17 +57,13 @@ function App() {
     const historical = predictionData.historical_data.map(item => ({
       date: item.date,
       price: item.price,
-      type: 'Historical',
-      month: new Date(item.date).toLocaleString('default', { month: 'short' }),
-      day: new Date(item.date).getDate()
+      type: 'Historical'
     }));
     
     const predictions = predictionData.predictions.map(item => ({
       date: item.date,
       price: item.predicted_price,
-      type: 'Predicted',
-      month: new Date(item.date).toLocaleString('default', {month: 'short'}),
-      day: new Date(item.date).getDate()
+      type: 'Predicted'
     }));
     
     return [...historical, ...predictions];
@@ -190,18 +186,12 @@ function App() {
                 </Typography>
                 
                 {predictionData ? (
-                  <ResponsiveContainer width={625} height={490}>
+                  <ResponsiveContainer width="100%" height={400}>
                     <LineChart data={formatChartData()}>
                       <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="date" 
-                        tickFormatter={(value) => {const date = new Date(value);
-                          return date.toLocaleString('default', {month: 'short'})}}
-                          tick = {{fontsize: 12}}/>
-                      <YAxis tickFormatter={(value) => `$${value}`}/>
-                      <Tooltip formatter={(value) => [`$${value}`, 'Price']}
-                        labelFormatter={(label) => {const date = new Date(label); 
-                          return `${date.toLocaleString('default', {month: 'long'})} ${date.getDate()}, ${date.getFullYear()}`;
-                        }}/>
+                      <XAxis dataKey="date" />
+                      <YAxis />
+                      <Tooltip />
                       <Legend />
                       <Line 
                         type="monotone" 
@@ -209,8 +199,6 @@ function App() {
                         stroke="#8884d8" 
                         name="Price"
                         strokeWidth={2}
-                        dot={{ r: 4, fill: "#8884d8" }}
-                        activeDot={{ r: 6, fill: "#ff7300" }}
                       />
                     </LineChart>
                   </ResponsiveContainer>
@@ -218,7 +206,6 @@ function App() {
                   <Box 
                     sx={{ 
                       height: 400, 
-                      width: 400,
                       display: 'flex', 
                       alignItems: 'center', 
                       justifyContent: 'center',
