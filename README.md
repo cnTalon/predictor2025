@@ -18,10 +18,11 @@
 
 ## Key Features
 
-*Predict stock prices using machine learning models
+*Predict stock prices using machine learning models and statistics
 * Python backend with Flask
 * React frontend 
 * Model-driven predictions using libraries like scikit-learn, pandas, and yfinance
+* Armia style, trend based and seasonal naive prediction methods
 
 ## How To Use
 Prerequisites
