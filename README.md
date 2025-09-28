@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">A web-based stock price prediction app built with <a href="https://www.python.org/">Python</a> and <a href="https://react.dev/">React</a>.
+<h4 align="center">A web-based stock price prediction app built with <a href="https://www.python.org/">Python</a> and <a href="https://react.dev/">React</a>. This is what you do at 3am when you suddenly want to get your life in order, invest in some good long term picks and hope for an early retirement because who wants to work until they are 65?
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
