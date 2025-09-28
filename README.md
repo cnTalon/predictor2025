@@ -48,7 +48,7 @@ $ pip install -r requirements.txt
 python app.py
 
 # Go into the repository
-$ cd frontend
+$ cd..
 
 # Install dependencies
 $ npm install
